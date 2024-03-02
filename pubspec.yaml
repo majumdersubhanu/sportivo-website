@@ -38,6 +38,8 @@ dependencies:
   glassmorphism_ui: ^0.3.0
   neopop: ^1.0.2
   gap: ^3.0.1
+  carousel_slider: ^4.2.1
+  google_fonts: ^6.2.0
 
 dev_dependencies:
   flutter_test:
