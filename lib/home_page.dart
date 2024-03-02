@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sportivo_website/widgets/contact_form.dart';
 import 'package:sportivo_website/widgets/parallax_bg.dart';
 import 'package:sportivo_website/widgets/sections.dart';
 import 'package:sportivo_website/widgets/sliders.dart';
@@ -53,7 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 HomePageSection(
                   header: texts[index],
-                  content: index == 2 ? const UpcomingEventsSlider() : null,
+                  content: index == 2
+                      ? const UpcomingEventsSlider()
+                      : index == 6
+                          ? ContactForm()
+                          : null,
                 ),
               ],
             ),
