@@ -24,6 +24,8 @@ class ContactForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlassContainer(
+      height: MediaQuery.of(context).size.height / 3,
+      width: MediaQuery.of(context).size.width / 4,
       blur: 8,
       gradient:
           const LinearGradient(colors: [Color(0xff8E2DE2), Color(0xff4A00E0)]),

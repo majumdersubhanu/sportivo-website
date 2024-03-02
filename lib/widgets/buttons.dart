@@ -4,9 +4,11 @@ import 'package:neopop/widgets/buttons/neopop_tilted_button/neopop_tilted_button
 
 class CustomNeoPopTileButton extends StatelessWidget {
   final String? label;
+  final void Function()? onTap;
   const CustomNeoPopTileButton({
     super.key,
     required this.label,
+    this.onTap,
   });
 
   @override
@@ -15,7 +17,10 @@ class CustomNeoPopTileButton extends StatelessWidget {
       isFloating: true,
       color: Colors.white,
       onTapUp: () => HapticFeedback.vibrate(),
-      onTapDown: () => HapticFeedback.vibrate(),
+      onTapDown: () {
+        HapticFeedback.vibrate();
+        onTap;
+      },
       floatingDuration: const Duration(milliseconds: 500),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
