@@ -17,19 +17,3 @@ class UpcomingEventsSlider extends StatelessWidget {
     );
   }
 }
-
-class SponsorsSlider extends StatelessWidget {
-  const SponsorsSlider({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return CarouselSlider(
-      options: CarouselOptions(
-        autoPlay: true,
-        aspectRatio: 2.0,
-        enlargeCenterPage: true,
-      ),
-      items: sponsorsSliders,
-    );
-  }
-}
