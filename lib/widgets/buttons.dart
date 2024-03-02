@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:neopop/widgets/buttons/neopop_tilted_button/neopop_tilted_button.dart';
 
 class CustomNeoPopTileButton extends StatelessWidget {
-  final String label;
+  final String? label;
   const CustomNeoPopTileButton({
     super.key,
     required this.label,
@@ -20,7 +20,7 @@ class CustomNeoPopTileButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Text(
-          label,
+          label ?? "Read More",
           style: const TextStyle(
             fontSize: 18.0,
             color: Colors.black,

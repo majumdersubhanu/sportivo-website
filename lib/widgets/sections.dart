@@ -9,10 +9,12 @@ class HomePageSection extends StatelessWidget {
     super.key,
     required this.header,
     this.content,
+    this.label,
   });
 
   final String header;
   final Widget? content;
+  final String? label;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class HomePageSection extends StatelessWidget {
                   ],
                 ),
               ),
-              const CustomNeoPopTileButton(label: 'Read More'),
+              CustomNeoPopTileButton(label: label),
             ],
           ),
         ),

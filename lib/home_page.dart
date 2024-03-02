@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       : index == 6
                           ? ContactForm()
                           : null,
+                  label: index == 6 ? 'Submit Form' : null,
                 ),
               ],
             ),

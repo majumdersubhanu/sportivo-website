@@ -30,6 +30,7 @@ class ParallaxBackdrop extends StatelessWidget {
       child: Image.asset(
         imageUrl,
         fit: BoxFit.cover,
+        gaplessPlayback: true,
       ),
     );
   }
