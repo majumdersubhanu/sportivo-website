@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Sportivo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false).copyWith(
-          // textTheme: GoogleFonts.poppinsTextTheme(),
-          ),
+        textTheme: GoogleFonts.openSansTextTheme(),
+      ),
       home: const MyHomePage(),
     );
   }
@@ -37,6 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
     'Wecome To Sportivo',
     'About Us',
     'Upcoming Events',
+    'Xapolates',
+    'Zaplots',
+    'Sponsors',
+    'Contact Us'
   ];
 
   late ScrollController controller;
@@ -56,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: ListView.builder(
         controller: controller,
-        itemCount: 3,
+        itemCount: texts.length,
         itemBuilder: (context, index) {
           return Container(
             height: MediaQuery.of(context).size.height,
@@ -131,10 +135,10 @@ class HomePageSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: GlassContainer(
-        height: MediaQuery.of(context).size.height / 2.5,
+        height: MediaQuery.of(context).size.height / 2,
         width: MediaQuery.of(context).size.width / 2,
         blur: 4,
-        border: Border.fromBorderSide(BorderSide.none),
+        border: const Border.fromBorderSide(BorderSide.none),
         shadowStrength: 5,
         // shape: BoxShape.circle,
         borderRadius: BorderRadius.circular(16),

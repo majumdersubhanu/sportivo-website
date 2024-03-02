@@ -68,6 +68,10 @@ flutter:
     - assets/images/sportivo_backdrop1.jpg
     - assets/images/sportivo_backdrop2.jpg
     - assets/images/sportivo_backdrop3.jpg
+    - assets/images/sportivo_backdrop4.jpg
+    - assets/images/sportivo_backdrop5.jpg
+    - assets/images/sportivo_backdrop6.jpg
+    - assets/images/sportivo_backdrop7.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
