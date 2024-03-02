@@ -24,6 +24,8 @@ class ContactForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlassContainer(
+      height: MediaQuery.of(context).size.height / 3 + 20,
+      width: MediaQuery.of(context).size.width / 4,
       blur: 8,
       gradient:
           const LinearGradient(colors: [Color(0xff8E2DE2), Color(0xff4A00E0)]),
@@ -52,14 +54,6 @@ class ContactForm extends StatelessWidget {
                     'required': (error) => 'Name can not be empty',
                   },
                 ),
-                // _buildReactiveTextField(
-                //   label: 'Phone Number',
-                //   hint: '+919876543210',
-                //   formControlName: 'phoneNumber',
-                //   validationMessages: {
-                //     'pattern': (error) => 'Please enter a valid phone number',
-                //   },
-                // ),
                 _buildReactiveTextField(
                   label: 'Description',
                   formControlName: 'issue',
@@ -104,6 +98,7 @@ class ContactForm extends StatelessWidget {
           focusedErrorBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.red),
           ),
+          errorStyle: const TextStyle(color: Colors.white),
         ),
         maxLines: maxLines ?? 1,
         expands: false,

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Sportivo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false).copyWith(
-        textTheme: GoogleFonts.latoTextTheme(),
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: const MyHomePage(),
     );
