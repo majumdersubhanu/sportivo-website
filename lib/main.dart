@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gap/gap.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:neopop/neopop.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Sportivo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false).copyWith(
-        textTheme: GoogleFonts.openSansTextTheme(),
+        textTheme: GoogleFonts.latoTextTheme(),
       ),
       home: const MyHomePage(),
     );
@@ -150,7 +151,7 @@ class HomePageSection extends StatelessWidget {
             textBaseline: TextBaseline.ideographic,
             children: [
               SizedBox(
-                width: MediaQuery.of(context).size.width / 4,
+                width: MediaQuery.of(context).size.width / 3.5,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -165,6 +166,7 @@ class HomePageSection extends StatelessWidget {
                       ),
                       maxLines: 2,
                     ),
+                    Gap(20),
                     content ?? const LoremIpsum(),
                   ],
                 ),
