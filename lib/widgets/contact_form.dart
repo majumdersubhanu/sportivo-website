@@ -52,20 +52,21 @@ class ContactForm extends StatelessWidget {
                     'required': (error) => 'Name can not be empty',
                   },
                 ),
-                _buildReactiveTextField(
-                  label: 'Phone Number',
-                  hint: '+919876543210',
-                  formControlName: 'phoneNumber',
-                  validationMessages: {
-                    'pattern': (error) => 'Please enter a valid phone number',
-                  },
-                ),
+                // _buildReactiveTextField(
+                //   label: 'Phone Number',
+                //   hint: '+919876543210',
+                //   formControlName: 'phoneNumber',
+                //   validationMessages: {
+                //     'pattern': (error) => 'Please enter a valid phone number',
+                //   },
+                // ),
                 _buildReactiveTextField(
                   label: 'Description',
                   formControlName: 'issue',
                   validationMessages: {
                     'required': (error) => 'Description can not be empty',
                   },
+                  maxLines: 3,
                 ),
               ],
             ),
@@ -80,6 +81,7 @@ class ContactForm extends StatelessWidget {
     String? hint,
     required String formControlName,
     required Map<String, String Function(Object)> validationMessages,
+    int? maxLines,
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -90,19 +92,21 @@ class ContactForm extends StatelessWidget {
           hintText: hint,
           labelStyle: const TextStyle(color: Colors.white),
           hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
-          enabledBorder: const OutlineInputBorder(
+          enabledBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.white),
           ),
-          focusedBorder: const OutlineInputBorder(
+          focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.white),
           ),
-          errorBorder: const OutlineInputBorder(
+          errorBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.red),
           ),
-          focusedErrorBorder: const OutlineInputBorder(
+          focusedErrorBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.red),
           ),
         ),
+        maxLines: maxLines ?? 1,
+        expands: false,
         style: const TextStyle(color: Colors.white),
         validationMessages: validationMessages,
       ),
