@@ -64,10 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
                           content: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const FlutterLogo(
-                            curve: Curves.ease,
-                            size: 200,
-                            style: FlutterLogoStyle.markOnly,
+                          Image.asset(
+                            'assets/images/sportivo_logo.png',
+                            alignment: Alignment.center,
+                            fit: BoxFit.contain,
+                            height: 200,
+                            width: 200,
                           ),
                           const Gap(50),
                           Text(
@@ -192,9 +194,21 @@ class NavBar extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
         child: Row(
           children: [
-            FlutterLogo(
-              size: 30,
-              style: FlutterLogoStyle.markOnly,
+            Image.asset(
+              'assets/images/sportivo_logo.png',
+              alignment: Alignment.center,
+              fit: BoxFit.contain,
+              height: 40,
+              width: 40,
+            ),
+            Gap(8),
+            Text(
+              "Sportivo".toUpperCase(),
+              style: GoogleFonts.k2d(
+                fontSize: 20.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Spacer(),
             // Using map to create Text widgets with hover effect
