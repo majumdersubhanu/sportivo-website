@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Sportivo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false).copyWith(
-        textTheme: GoogleFonts.poppinsTextTheme(),
-      ),
+          // textTheme: GoogleFonts.poppinsTextTheme(),
+          ),
       home: const MyHomePage(),
     );
   }
@@ -134,6 +134,11 @@ class HomePageSection extends StatelessWidget {
         height: MediaQuery.of(context).size.height / 2.5,
         width: MediaQuery.of(context).size.width / 2,
         blur: 4,
+        border: Border.fromBorderSide(BorderSide.none),
+        shadowStrength: 5,
+        // shape: BoxShape.circle,
+        borderRadius: BorderRadius.circular(16),
+        shadowColor: Colors.white.withOpacity(0.24),
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
