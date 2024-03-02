@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:sportivo_website/constants.dart';
 import 'package:sportivo_website/widgets/contact_form.dart';
 import 'package:sportivo_website/widgets/parallax_bg.dart';
 import 'package:sportivo_website/widgets/sections.dart';
@@ -17,9 +18,9 @@ class _MyHomePageState extends State<MyHomePage> {
     'Wecome To Sportivo',
     'About Us',
     'Latest Events',
-    'Xapolates',
-    'Zaplots',
-    'Sponsors',
+    'Xaplotes',
+    'Vibgyor',
+    'Previous Sponsors',
     'Contact Us'
   ];
 
@@ -58,15 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       content: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      FlutterLogo(
+                      const FlutterLogo(
                         curve: Curves.ease,
                         size: 200,
                         style: FlutterLogoStyle.markOnly,
                       ),
-                      Gap(50),
+                      const Gap(50),
                       Text(
                         texts[index],
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 60.0,
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
@@ -81,18 +82,42 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Text(
                         texts[index],
-                        style: TextStyle(
-                          fontSize: 60.0,
+                        style: const TextStyle(
+                          fontSize: 40.0,
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
                         ),
                         maxLines: 2,
                       ),
-                      Gap(20),
+                      const Gap(20),
                       SizedBox(
                           height: MediaQuery.of(context).size.height / 2 - 200,
                           width: MediaQuery.of(context).size.width / 2 - 200,
-                          child: UpcomingEventsSlider()),
+                          child: const UpcomingEventsSlider()),
+                    ],
+                  ))
+                else if (index == 5)
+                  DynamicSection(
+                      content: Column(
+                    children: [
+                      Text(
+                        texts[index],
+                        style: const TextStyle(
+                          fontSize: 40.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                        ),
+                        maxLines: 2,
+                      ),
+                      const Gap(20),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height / 2 - 200,
+                          width: MediaQuery.of(context).size.width / 2 - 200,
+                          child: Wrap(
+                            spacing: 10,
+                            crossAxisAlignment: WrapCrossAlignment.center,
+                            children: sponsorsSliders,
+                          )),
                     ],
                   ))
                 else

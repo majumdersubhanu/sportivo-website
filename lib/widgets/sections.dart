@@ -82,7 +82,9 @@ class DynamicSection extends StatelessWidget {
         shadowStrength: 5,
         borderRadius: BorderRadius.circular(16),
         shadowColor: Colors.white.withOpacity(0.24),
-        child: content,
+        child: Center(
+          child: content,
+        ),
       ),
     );
   }
